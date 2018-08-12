@@ -133,5 +133,26 @@ def exercicio8():
       print('La suma de todos los numeros es: '+str(numeroSumado))
       numeroPositivo = False
 
-exercicio8()
-  
+#------------ EXERCICIO 9 -----------
+# Crea un programa que pida introducir a dirreceion de mail por teclado
+# o programa debe decirnos se e correcta en base a se ten @, que non teña mais
+# de unha a direcion tamen sera erronea de este caracter esta ao princio ou final
+
+def exercicio9():
+    if esEmailValido(input("Introduzca o seu email: ")):
+        print("El email es valido")
+    else:
+        print("El email es incorrecto")
+
+def esEmailValido(email):
+    if email.count('@') == 1:
+        if email.endswith('@'):
+            return False
+        elif email.startswith('@'):
+            return False
+        else:
+            return True
+    else:
+        return False
+
+exercicio9()
