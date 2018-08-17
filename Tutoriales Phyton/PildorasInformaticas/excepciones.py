@@ -15,15 +15,15 @@ def divide(num1, num2):
         return num1 / num2
     except ZeroDivisionError:
         print("No puedes dividir entre 0")
-        return ("Operacion erronea")
+        return "Operacion erronea"
 
 
 def introducir_valores():
-    entrada = dict()
-    entrada['numero1'] = int(input("Introduce el primer numero: "))
-    entrada['numero2'] = int(input("Introduce en segundo numero: "))
-    entrada['operacion'] = input("Introduce la operacion \n suma \n resta \n multiplica \n divide \n\n> ")
-    return entrada
+    entrada_vacia = dict()
+    entrada_vacia['numero1'] = int(input("Introduce el primer número: "))
+    entrada_vacia['numero2'] = int(input("Introduce en segundo número: "))
+    entrada_vacia['operacion'] = input("Introduce la operación \n suma \n resta \n multiplica \n divide \n\n> ")
+    return entrada_vacia
 
 
 def realiza_operacion(num1, num2, operacion):
@@ -36,7 +36,7 @@ def realiza_operacion(num1, num2, operacion):
     elif operacion == 'divide':
         divide(num1, num2)
     else:
-        print("No hai definido un metodo para esa operacion");
+        print("No hai definido un metodo para esa operacion")
 
 
 try:
