@@ -1,25 +1,27 @@
-def generaPares(limite):
-  num = 1
-  miLista=[]
-  while num < limite:
-    miLista.append(num*2)
-    num+=1
-  return miLista
-
-print(generaPares(10))
+def genera_pares(limite):
+    num = 1
+    mi_lista = []
+    while num < limite:
+        mi_lista.append(num * 2)
+        num += 1
+    return mi_lista
 
 
-def generadorPares(limite):
-  num = 1
-  while num < limite:
-    yield num*2
-    num+=1
+print(genera_pares(10))
 
-def pedirTodosLosPares():
-  for numeroPar in generadorPares(10):
-    print(numeroPar)
 
-print(next(generadorPares(10)))
+def generador_pares(limite):
+    num = 1
+    while num < limite:
+        yield num * 2
+        num += 1
 
-print(next(generadorPares(10)))
 
+def pedir_todos_los_pares():
+    for numeroPar in generador_pares(10):
+        print(numeroPar)
+
+
+print(next(generador_pares(10)))
+
+print(next(generador_pares(10)))
