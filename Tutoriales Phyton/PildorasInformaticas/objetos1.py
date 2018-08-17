@@ -1,4 +1,4 @@
-class Coche():
+class Coche:
 
     def __init__(self):
         self.__largoChasis = 250
@@ -20,14 +20,18 @@ class Coche():
             return "El coche esta apagado"
 
     def get_caracteristicas(self):
-        return "El coche tiene ", self.__ruedas, " ruedas. y un ancho de ", self.__anchoChasis, " y un largo de ", self.__largoChasis
+        return "El coche tiene ", self.__ruedas, " ruedas. y un ancho de ", \
+               self.__anchoChasis, " y un largo de ", \
+               self.__largoChasis
 
     def __chequeo_interno(self):
         print("Realizando chequeo interno")
         self.gasolina = "ok"
         self.aceite = "mal"
         self.puertas = "cerradas"
-        return self.gasolina == "ok" and self.aceite == "ok" and self.puertas == "cerradas"
+        return \
+            self.gasolina == \
+            "ok" and self.aceite == "ok" and self.puertas == "cerradas "
 
 
 miCoche = Coche()

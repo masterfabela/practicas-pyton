@@ -18,7 +18,7 @@ miDiccionario["Italia"] = "Roma"
 # Elimina un elemento del diccionario 
 del miDiccionario["Reino Unido"]
 
-#Usar una tupla para llenar un dicionario
+# Usar una tupla para llenar un dicionario
 miTupla = ("España", "Francia", "Alemania")
 diccionarioDeTupla = {
     miTupla[0]: "Madrid",

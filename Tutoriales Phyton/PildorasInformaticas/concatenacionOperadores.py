@@ -1,4 +1,4 @@
-def primerEjemplo():
+def primer_ejemplo():
     edad = -7
     if 0 < edad < 100:
         print("La edad es correcta")
@@ -6,62 +6,64 @@ def primerEjemplo():
         print("Edad incorrecta")
 
 
-def ejemploSalariosEmpresa():
-    salarioPresidente = int(input("Introduce salario del presidente: "))
-    print("Salario presidente: " + str(salarioPresidente))
+def ejemplo_salarios_empresa():
+    salario_presidente = int(input("Introduce salario del presidente: "))
+    print("Salario presidente: " + str(salario_presidente))
 
-    salarioDirector = int(input("Introduce salario del director: "))
-    print("Salario director: " + str(salarioDirector))
+    salario_director = int(input("Introduce salario del director: "))
+    print("Salario director: " + str(salario_director))
 
-    salarioJefeArea = int(input("Introduce salario del Jefe de area: "))
-    print("Salario Jefe de area: " + str(salarioJefeArea))
+    salario_jefe_area = int(input("Introduce salario del Jefe de area: "))
+    print("Salario Jefe de area: " + str(salario_jefe_area))
 
-    salarioAdministrativo = int(
+    salario_administrativo = int(
         input("Introduce salario del administrativo: "))
-    print("Salario administrativo: " + str(salarioAdministrativo))
+    print("Salario administrativo: " + str(salario_administrativo))
 
-    if salarioAdministrativo < salarioJefeArea < salarioDirector < salarioPresidente:
+    if salario_administrativo < salario_jefe_area < salario_director < salario_presidente:
         print("Los salarios son correctos")
     else:
         print("Algo falla en esta empresa")
 
 
-def asignadorDeBecas():
+def asignador_de_becas():
     print("Programa de becas año 2017: ")
-    distanciaEscuela = int(input("Introduce la distancia en KMs: "))
-    numeroHermanos = int(input("Introduce numero de hermanos en el centro: "))
-    salarioFamiliar = float(input("Introduce salario anual bruto: "))
-    if tieneDerechoABeca(distanciaEscuela, numeroHermanos, salarioFamiliar):
+    distancia_escuela = int(input("Introduce la distancia en KMs: "))
+    numero_hermanos = int(input("Introduce numero de hermanos en el centro: "))
+    salario_familiar = float(input("Introduce salario anual bruto: "))
+    if tiene_derecho_beca(distancia_escuela, numero_hermanos, salario_familiar):
         print("Tiene derecho a beca")
     else:
         print("No tiene derecho a beca")
 
 
-def tieneDerechoABeca(distanciaEscuela, numeroHermanos, salarioFamiliar):
-    if distanciaEscuela > 40 and numeroHermanos > 2 or salarioFamiliar <= 20000:
+def tiene_derecho_beca(distancia_escuela, numero_hermanos, salario_familiar):
+    if distancia_escuela > 40 and numero_hermanos > 2 or salario_familiar <= 20000:
         return True
     else:
         return False
 
-def ejemploAsignaturas():
-    listaDeAsignaturas = (
+
+def ejemplo_asignaturas():
+    lista_asignaturas = (
         "informatica grafica",
         "pruebas de software",
         "usabilidad y accesibilidad"
     )
-    print("Asignaturas a escojer: " + str(listaDeAsignaturas))
-    
-    if estaAsignatura(
-        input("Que asignatura desea?: "),
-        list(listaDeAsignaturas)
+    print("Asignaturas a escojer: " + str(lista_asignaturas))
+
+    if esta_asignatura(
+            input("Que asignatura desea?: "),
+            list(lista_asignaturas)
     ):
         print("Asignatura Asignada: ")
     else:
         print("La asignatura no existe en la lista")
 
-def estaAsignatura(asignatura, asignaturas):
+
+def esta_asignatura(asignatura, asignaturas):
     asignatura = asignatura.lower()
     return asignatura in asignaturas
 
-ejemploAsignaturas()
- 
+
+ejemplo_asignaturas()

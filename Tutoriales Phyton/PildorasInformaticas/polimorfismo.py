@@ -1,4 +1,4 @@
-class Coche():
+class Coche:
 
     @staticmethod
     def desplazamiento():
