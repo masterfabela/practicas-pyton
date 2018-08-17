@@ -131,7 +131,8 @@ def exercicio8():
     numero_positivo = True
     numero_sumado = 0
     while numero_positivo:
-        numero = int(input("Inserta un numero positivo para sumar, negativo para terminar: "))
+        numero = int(input("Inserta un numero positivo para sumar, negativo "
+                           "para terminar: "))
         if numero >= 0:
             numero_sumado = numero_sumado + numero
         else:
@@ -142,7 +143,8 @@ def exercicio8():
 # ------------ EXERCICIO 9 -----------
 # Crea un programa que pida introducir a dirreceion de mail por teclado
 # o programa debe decirnos se e correcta en base a se ten @, que non teña mais
-# de unha a direcion tamen sera erronea de este caracter esta ao princio ou final
+# de unha a direcion tamen sera erronea de este caracter esta ao principio
+# ou final
 
 def exercicio9():
     if es_email_valido(input("Introduzca o seu email: ")):

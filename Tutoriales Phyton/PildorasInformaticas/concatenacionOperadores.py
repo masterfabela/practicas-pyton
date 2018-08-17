@@ -20,7 +20,8 @@ def ejemplo_salarios_empresa():
         input("Introduce salario del administrativo: "))
     print("Salario administrativo: " + str(salario_administrativo))
 
-    if salario_administrativo < salario_jefe_area < salario_director < salario_presidente:
+    if salario_administrativo < salario_jefe_area < salario_director < \
+            salario_presidente:
         print("Los salarios son correctos")
     else:
         print("Algo falla en esta empresa")
@@ -38,7 +39,8 @@ def asignador_de_becas():
 
 
 def tiene_derecho_beca(distancia_escuela, numero_hermanos, salario_familiar):
-    if distancia_escuela > 40 and numero_hermanos > 2 or salario_familiar <= 20000:
+    if distancia_escuela > 40 and numero_hermanos > 2 or salario_familiar <= \
+            20000:
         return True
     else:
         return False
