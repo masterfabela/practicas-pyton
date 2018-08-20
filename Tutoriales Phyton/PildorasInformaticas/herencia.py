@@ -26,9 +26,55 @@ class Vehiculo:
         )
 
 
+class Furgoneta(Vehiculo):
+
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
+        self.cargado = False
+
+    def carga(self, cargar):
+        if self.cargado:
+            return "La furgoneta esta cargada"
+        else:
+            return "La furgoneta no esta cargada"
+
+
 class Moto(Vehiculo):
+    haciendo_caballito = ""
+
+    def caballito(self):
+        self.haciendo_caballito = "Voy haciendo el caballito"
+
+    def estado(self):
+        print( 
+            "Marca: ", self.marca,
+            "\nModelo: ", self.modelo,
+            "\nEsta en marcha: ", self.enMarcha,
+            "\nEsta acelerando: ", self.acelera,
+            "\nEsta frenando: ", self.frena, "\n",
+            self.haciendo_caballito
+        )
+
+class Vehiculo_electrico:
+
+    def __init__(self):
+        self.autonomia = 100
+
+    def cargar_energia(self):
+        self.cargando = True
+
+
+class BicicletaElectrica(Vehiculo, Vehiculo_electrico):
     pass
 
 
 miMoto = Moto("Honda", "CBR")
+miMoto.caballito()
 miMoto.estado()
+
+mi_furgoneta = Furgoneta("Renault", "Kangoo")
+mi_furgoneta.arrancar()
+mi_furgoneta.estado()
+print(mi_furgoneta.carga(True))
+
+mi_bici = BicicletaElectrica("Orbea", "HC1030")
