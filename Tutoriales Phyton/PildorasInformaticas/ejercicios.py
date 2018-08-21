@@ -153,14 +153,17 @@ def exercicio9():
         print("El email es incorrecto")
 
 
+def email_tiene_arroba(email):
+    return email.count('@') == 1
+
+
+def email_termina_empieza_con_arroba(email):
+    return email.endswith('@') or email.startswith('@')
+
+
 def es_email_valido(email):
-    if email.count('@') == 1:
-        if email.endswith('@'):
-            return False
-        elif email.startswith('@'):
-            return False
-        else:
-            return True
+    if email_tiene_arroba(email):
+        return not email_termina_empieza_con_arroba(email)
     else:
         return False
 
