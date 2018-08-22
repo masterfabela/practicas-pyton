@@ -70,15 +70,3 @@ class VehiculoElectrico(Vehiculo):
 class BicicletaElectrica(VehiculoElectrico):
     pass
 
-
-miMoto = Moto("Honda", "CBR")
-miMoto.caballito()
-miMoto.estado()
-
-mi_furgoneta = Furgoneta("Renault", "Kangoo")
-mi_furgoneta.arrancar()
-mi_furgoneta.estado()
-print(mi_furgoneta.carga())
-
-mi_bici = BicicletaElectrica("Orbea", "HC1030")
-tesla = VehiculoElectrico("Tesla", "Model X")

@@ -23,5 +23,7 @@ class Empleado(Persona):
               " anos")
 
 
-antonio = Empleado(1500, 12, "Manuel", 55, "Colombia")
+antonio = Persona("Manuel", 55, "Colombia")
 antonio.descripcion()
+print(isinstance(antonio, Empleado))
+print(isinstance(antonio, Persona))
